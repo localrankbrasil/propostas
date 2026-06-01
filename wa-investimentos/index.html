@@ -688,7 +688,9 @@
     .invest-card .service-price { font-size: 28px !important; }
 
     /* Inline grids inside slides */
-    div[style*="grid-template-columns: 1fr 1fr"] {
+    div[style*="grid-template-columns: 1fr 1fr"],
+    div[style*="grid-template-columns:1fr 1fr"],
+    .eco-grid {
       display: flex !important;
       flex-direction: column !important;
       gap: 16px !important;
@@ -719,9 +721,7 @@
       gap: 8px !important;
     }
 
-    #nav-dots { display: none !important; }
-    #slide-counter { display: inline !important; font-size: 12px !important; }
-    .nav-arrow { font-size: 16px !important; padding: 4px 10px !important; }
+    #nav-controls { display: none !important; }
   }
 
   /* ══════════════════════════════════════════
@@ -1047,7 +1047,7 @@
     <h2>O Modelo Atual <em>Não Está Posicionado</em> para o High Ticket</h2>
     <div class="divider"></div>
 
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; width:100%; max-width:1100px; margin-top:32px;">
+    <div class="eco-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:24px; width:100%; max-width:1100px; margin-top:32px;">
 
       <div style="background:rgba(231,76,60,0.1); border:1px solid rgba(231,76,60,0.4); border-radius:12px; padding:24px 28px;">
         <p style="font-size:13px; font-weight:700; letter-spacing:2px; color:#e74c3c; margin-bottom:12px;">❌ CENÁRIO ATUAL</p>
