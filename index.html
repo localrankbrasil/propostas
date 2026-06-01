@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propostas — Local Rank Brasil</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #172259;
+    color: #fff;
+    min-height: 100vh;
+    padding: 60px 40px;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .header img { height: 40px; margin-bottom: 24px; }
+  .header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  .header p { opacity: 0.6; font-size: 15px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 28px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.1); }
+  .card-tag {
+    display: inline-block;
+    background: #62bb46;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+  .card h2 { font-size: 20px; margin-bottom: 6px; }
+  .card p { font-size: 14px; opacity: 0.7; }
+  .card-arrow {
+    margin-top: 20px;
+    color: #62bb46;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .empty {
+    text-align: center;
+    opacity: 0.4;
+    font-size: 15px;
+    grid-column: 1/-1;
+    padding: 40px;
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <img src="https://localrankbrasil.com/wp-content/uploads/2026/05/Local_Rank_Logo_White_Green-scaled.png" alt="Local Rank Brasil">
+  <h1>Propostas Comerciais</h1>
+  <p>Acesso interno — Local Rank Brasil</p>
+</div>
+<div class="grid">
+  <a class="card" href="wa-investimentos/">
+    <span class="card-tag">Cliente</span>
+    <h2>WA Investimentos</h2>
+    <p>Estrutura de marketing para consórcio — brasileiros nos EUA</p>
+    <div class="card-arrow">Abrir proposta →</div>
+  </a>
+</div>
+</body>
+</html>
