@@ -527,56 +527,61 @@
 
   #nav-controls {
     position: fixed;
-    bottom: 16px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     z-index: 1000;
-    background: rgba(0,0,0,0.45);
-    backdrop-filter: blur(12px);
-    padding: 6px 14px;
-    border-radius: 40px;
-    border: 1px solid rgba(255,255,255,0.1);
-    opacity: 0.7;
-    transition: opacity 0.2s;
+    background: rgba(10,15,50,0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 8px 16px;
+    border-radius: 32px;
+    border: 1px solid rgba(255,255,255,0.12);
   }
-  #nav-controls:hover { opacity: 1; }
 
   .nav-arrow {
     background: none;
     border: none;
-    color: #fff;
-    font-size: 16px;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
     cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 6px;
-    transition: background 0.2s;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.2s;
     line-height: 1;
+    min-width: unset;
+    min-height: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .nav-arrow:hover { background: rgba(255,255,255,0.15); }
+  .nav-arrow:hover { color: #fff; }
 
   #nav-dots {
     display: flex;
-    gap: 6px;
+    gap: 5px;
     align-items: center;
   }
 
   .nav-dot {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.3);
     cursor: pointer;
     padding: 0;
+    min-width: unset;
+    min-height: unset;
     transition: all 0.2s;
   }
 
   .nav-dot.active {
     background: #62bb46;
-    width: 16px;
+    width: 14px;
     border-radius: 3px;
   }
 
@@ -714,9 +719,9 @@
       gap: 8px !important;
     }
 
-    .nav-dot { display: none; }
-
-    .nav-arrow { font-size: 18px !important; padding: 6px 12px !important; }
+    #nav-dots { display: none !important; }
+    #slide-counter { display: inline !important; font-size: 12px !important; }
+    .nav-arrow { font-size: 16px !important; padding: 4px 10px !important; }
   }
 
   /* ══════════════════════════════════════════
@@ -1204,6 +1209,7 @@
 <div id="nav-controls">
   <button class="nav-arrow" id="prev-btn">&#8592;</button>
   <div id="nav-dots"></div>
+  <span id="slide-counter" style="font-size:11px;color:rgba(255,255,255,0.5);font-family:Roboto,sans-serif;min-width:32px;text-align:center;">1/14</span>
   <button class="nav-arrow" id="next-btn">&#8594;</button>
 </div>
 
@@ -1248,6 +1254,8 @@
     });
     prevBtn.style.opacity = current === 0 ? '0.3' : '1';
     nextBtn.style.opacity = current === slides.length - 1 ? '0.3' : '1';
+    const counter = document.getElementById('slide-counter');
+    if (counter) counter.textContent = (current + 1) + '/' + slides.length;
   }
 
   // ── Detectar slide ativo no scroll ──────────────────────────
