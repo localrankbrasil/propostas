@@ -470,7 +470,6 @@
       background: var(--gradient);
       padding: 96px 0; position: relative; overflow: hidden;
     }
-    .forwho::before { display: none; }
     .forwho__inner {
       position: relative; z-index: 1;
       display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
@@ -618,11 +617,6 @@
 
     /* ---- Learn no fundo gradiente ---- */
     .learn { background: var(--gradient); padding: 96px 0; position: relative; overflow: hidden; }
-    .learn::before {
-      content: ''; position: absolute; inset: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='1' fill='%23ffffff' opacity='.04'/%3E%3C/svg%3E");
-      background-size: 80px 80px;
-    }
     .learn__head { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 48px; position: relative; z-index: 1; }
     .learn__sub--light { font-family: var(--font-body); font-size: 1rem; color: rgba(255,255,255,.65); line-height: 1.75; }
     .learn__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; position: relative; z-index: 1; }
@@ -902,8 +896,10 @@
         transition-duration: 0.01ms !important;
       }
     }
-  
-    .learn::before {
+
+    
+    .hero::before,
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -917,21 +913,29 @@
       opacity: 0.9;
     }
 
-    
-    .hero::before,
     .forwho::before {
       content: "";
       position: absolute;
       inset: 0;
       pointer-events: none;
       background:
-        radial-gradient(circle at 76% 18%, rgba(255,255,255,0.13), transparent 25%),
-        radial-gradient(circle at 16% 78%, rgba(98,187,70,0.10), transparent 28%),
-        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: auto, auto, 56px 56px, 56px 56px;
-      opacity: 0.9;
-    }</style>
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.12), transparent 30%),
+        radial-gradient(circle at 70% 70%, rgba(98,187,70,0.08), transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(255,255,255,0.06), transparent 25%);
+    }
+
+    .learn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 15% 25%, rgba(255,255,255,0.15), transparent 20%),
+        radial-gradient(circle at 75% 15%, rgba(98,187,70,0.12), transparent 25%),
+        radial-gradient(circle at 50% 70%, rgba(255,255,255,0.10), transparent 22%),
+        radial-gradient(circle at 85% 65%, rgba(98,187,70,0.08), transparent 18%);
+    }
+</style>
 </head>
 <body>
 
