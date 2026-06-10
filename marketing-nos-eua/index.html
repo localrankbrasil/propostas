@@ -902,7 +902,21 @@
         transition-duration: 0.01ms !important;
       }
     }
-  </style>
+  
+    .learn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 76% 18%, rgba(255,255,255,0.13), transparent 25%),
+        radial-gradient(circle at 16% 78%, rgba(98,187,70,0.10), transparent 28%),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: auto, auto, 56px 56px, 56px 56px;
+      opacity: 0.9;
+    }
+</style>
 </head>
 <body>
 
