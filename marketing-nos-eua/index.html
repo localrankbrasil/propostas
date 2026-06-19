@@ -177,10 +177,12 @@
 
     .hero__inner {
       position: relative; z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 64px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      gap: 32px;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     /* Badge superior */
@@ -935,6 +937,16 @@
         radial-gradient(circle at 50% 70%, rgba(255,255,255,0.10), transparent 22%),
         radial-gradient(circle at 85% 65%, rgba(98,187,70,0.08), transparent 18%);
     }
+
+    .hero__badge-row { justify-content: center; }
+    .hero__title { text-align: center; }
+    .hero__sub { text-align: center; }
+    .hero__perks { 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      gap: 8px;
+    }
 </style>
 </head>
 <body>
@@ -1225,7 +1237,7 @@
 </section>
 
 <!-- ===== 7. O QUE VOCÊ RECEBE — Gradiente azul ===== -->
-<section style="background:var(--gradient);padding:96px 0;position:relative;overflow:hidden;">
+<section id="comprar-agora" style="background:var(--gradient);padding:96px 0;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2280%22 height=%2280%22%3E%3Ccircle cx=%2240%22 cy=%2240%22 r=%221%22 fill=%22%23ffffff%22 opacity=%22.04%22/%3E%3C/svg%3E');background-size:80px 80px;pointer-events:none;"></div>
   <div class="container" style="position:relative;z-index:1;">
     <div style="text-align:center;margin-bottom:56px;">
@@ -1327,17 +1339,28 @@
         <span class="box-label box-label--navy" style="font-size:.65rem;">ACESSE O MATERIAL</span>
         <h3 class="card-title">Acessar o material</h3>
         <p class="card-sub">Preencha os dados e enviaremos o PDF.</p>
-        <form id="form-final">
-          <div class="ff"><label for="f-name">Nome completo</label><input id="f-name" type="text" name="name" placeholder="Seu nome" required /></div>
-          <div class="ff"><label for="f-email">E-mail</label><input id="f-email" type="email" name="email" placeholder="seu@email.com" required /></div>
-          <div class="ff"><label for="f-city">Cidade e Estado (EUA)</label><input id="f-city" type="text" name="city" placeholder="Ex: Miami, FL" required /></div>
-          <div class="ff"><label for="f-niche">Nicho / Segmento</label><input id="f-niche" type="text" name="niche" placeholder="Ex: Limpeza, Construção, Paisagismo" required /></div>
-          <div class="ff"><label for="f-social">Instagram ou Site</label><input id="f-social" type="text" name="social" placeholder="@seuinstagram ou www.seusite.com" /></div>
-          <button type="submit" class="fsub">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v9M8 11L5 8M8 11L11 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Quero o Guia agora
-          </button>
-        </form>
+        <div style="text-align: center; padding: 0;">
+        <span class="box-label" style="font-size: 0.65rem; display: inline-block;">OFERTA EXCLUSIVA</span>
+        <h2 style="font-family: var(--font-title); font-size: 2rem; color: var(--navy); margin: 24px 0 16px;">
+          Compre o Guia Completo
+        </h2>
+        <p style="color: var(--text-muted); margin-bottom: 32px; line-height: 1.8;">
+          <strong style="display: block; font-size: 1.75rem; color: var(--navy); margin-bottom: 8px;">R$ 49,90</strong>
+          <span style="text-decoration: line-through; color: #999; font-size: 0.9rem;">R$ 99,80</span>
+          <span style="display: block; color: var(--green); font-weight: 700; margin-top: 4px;">50% OFF</span>
+        </p>
+        <a href="#" class="btn btn-green" style="font-size: 1.1rem; padding: 16px 48px; margin: 0 auto; display: inline-flex;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          Comprar na Hotmart
+        </a>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 20px; line-height: 1.8;">
+          ✓ Acesso imediato ao PDF<br/>
+          ✓ Garantia de 7 dias<br/>
+          ✓ Suporte via email
+        </p>
+      </div>
         <p class="fdisclaim">Ao clicar você aceita receber conteúdos da Local Rank Brasil. Cancele quando quiser.</p>
       </div>
     </div>
